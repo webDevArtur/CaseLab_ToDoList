@@ -1,0 +1,247 @@
+/* Сброс стилей для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body */
+body {
+    background-color: #7FFFD4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 1em;
+}
+
+/* Стили для заголовка */
+header {
+    font-size: 3em;
+    font-family: Arial Black;
+    color: #0319A8;
+    margin-bottom: 1em;
+}
+
+/* Стили для контейнера */
+.container {
+    width: 100%;
+    max-width: 400px; /* Оптимальная ширина */
+    text-align: center;
+}
+
+/* Стили для кнопок */
+.btn {
+    font-size: 1.5em;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    background-color: #ADFF2F;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.btn:hover {
+    background-color: #3CB371;
+}
+
+/* Общие стили для контейнеров */
+.full-container, .list-container, .card {
+    width: 100%;
+    max-width: 1200px; /* Оптимальная ширина для больших экранов */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* Стили для контейнера списка задач */
+.list-container {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+/* Стили для списка задач */
+.list {
+    width: 100%;
+    max-width: 100%; /* Используем 100% ширины для списка */
+    background-color: #fff8e7;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+/* Стили для элементов списка */
+.list-group-item {
+    width: 100%;
+    max-width: 100%; /* Используем 100% ширины для элементов списка */
+    padding: 1em;
+    border: solid 1px black;
+    border-radius: 1em;
+    margin: 1em 0;
+    background-color: #00B9FC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Стили для карточек */
+.card {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #fff8e7;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили для заголовка карточки */
+.card-header {
+    font-size: 2em;
+    font-family: Arial Black;
+    margin-bottom: 0.5em;
+}
+
+/* Стили для формы */
+#form {
+    width: 100%;
+    max-width: 400px; /* Оптимальная ширина */
+}
+
+/* Стили для группы формы */
+.form-group {
+    margin: 0.5em 0;
+}
+
+/* Стили для ввода задачи */
+#taskInput {
+    font-size: 2em;
+    padding: 0.5em;
+    border-radius: 1em;
+    width: 100%;
+}
+
+/* Стили для центрирования элементов */
+.centered-container {
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+}
+
+/* Стили для кнопки "Добавить" */
+.submit {
+    background-color: #ADFF2F;
+    border-radius: 1em;
+    width: 100%;
+    max-width: 200px; /* Оптимальная ширина */
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.submit:hover {
+    background-color: #3CB371;
+}
+
+/* Общие стили для контейнера списка и элементов списка */
+.list-container, .list-group-item {
+    width: 100%;
+    max-width: 1200px; /* Оптимальная ширина для больших экранов */
+}
+
+/* Стили для заголовка задачи */
+.task-title {
+    font-size: 1.5em;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Стили для выполненных задач */
+.task-title--done {
+    text-decoration: line-through;
+    color: #fff;
+}
+
+/* Стили для кнопок управления задачами */
+.task-item__buttons {
+    display: flex;
+    margin-top: 0.5em;
+}
+
+/* Стили для уведомлений */
+.notify-holder {
+    height: 60px;
+    margin-bottom: 1em;
+}
+
+/* Стили для пустого списка */
+.empty-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+/* Стили для заголовка пустого списка */
+.empty-list__title {
+    font-size: 28px;
+    margin-bottom: 0.5em;
+    font-weight: 300;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Стили для иконки пустого списка */
+.empty-list__icon {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+/* Стили для действий */
+.btn-action {
+    background-color: #ffffff;
+    padding: 8px 10px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 9px;
+    transition: opacity 0.2s ease-in;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-action:hover {
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+.btn-action img {
+    pointer-events: none;
+}
+
+/* Скрытие элемента */
+.none {
+    display: none !important;
+}
+
+/* Стили для выделения четных и нечетных элементов */
+.even-highlighted {
+    background-color: lightblue;
+}
+
+.odd-highlighted {
+    background-color: lightgreen;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 768px) {
+    header {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+}
