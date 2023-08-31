@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="css/main.css"/>
+	<title>To Do List</title>
+</head>
+<body>
+<div class="full-container">
+	<!-- Заголовок страницы -->
+	<header>To Do List</header>
+
+	<!-- Контейнер для списка задач -->
+	<div class="list-container">
+		<div class="list">
+			<!-- Список задач -->
+			<ul id="tasksList">
+				<!-- Здесь будут отображаться задачи -->
+			</ul>
+		</div>
+	</div>
+
+	<!-- Контейнер для кнопок управления задачами -->
+	<div class="container-btn">
+		<div class="aside-right">
+			<!-- Кнопки для управления задачами -->
+			<button id="highlightEvenBtn" class="btn">Выделить четные</button>
+			<button id="highlightOddBtn" class="btn">Выделить нечетные</button>
+			<button id="deleteLastBtn" class="btn">Удалить последний</button>
+			<button id="deleteFirstBtn" class="btn">Удалить первый</button>
+		</div>
+	</div>
+
+	<!-- Форма для добавления новой задачи -->
+	<div class="card">
+		<div class="card-header">Добавить новую задачу</div>
+		<div class="card-body">
+			<form id="form">
+				<div class="form-group">
+					<!-- Поле ввода задачи -->
+					<input type="text" id="taskInput" placeholder="Текст задачи" required>
+				</div>
+				<div class="centered-container">
+					<!-- Кнопка добавления задачи -->
+					<button class="submit" type="submit">Добавить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Подключение скрипта -->
+<script src="js/main.js"></script>
+</body>
+</html>
