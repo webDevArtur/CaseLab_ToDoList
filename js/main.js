@@ -44,7 +44,7 @@ function addTask(event) {
 
 	taskInput.value = ''; // Очищаем поле ввода
 	taskInput.focus(); // Возвращаем фокус на поле ввода
-
+	checkEmptyList(); // Проверяем, пуст ли список
 }
 
 // Функция удаления задачи
