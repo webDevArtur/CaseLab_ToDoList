@@ -4,12 +4,6 @@ const taskInput = document.querySelector('#taskInput'); // Поле ввода �
 const tasksList = document.querySelector('#tasksList'); // Список задач
 const emptyList = document.querySelector('#emptyList'); // Сообщение о пустом списке
 
-// Слушатели событий для кнопок
-highlightEvenBtn.addEventListener('click', highlightEven); // Выделить четные
-highlightOddBtn.addEventListener('click', highlightOdd); // Выделить нечетные
-deleteLastBtn.addEventListener('click', deleteLast); // Удалить последний
-deleteFirstBtn.addEventListener('click', deleteFirst); // Удалить первый
-
 // Массив задач
 let tasks = [];
 
