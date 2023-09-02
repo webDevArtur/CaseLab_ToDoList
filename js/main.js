@@ -56,8 +56,6 @@ function deleteTask(event) {
 	tasks = tasks.filter((task) => task.id !== id); // Удаляем задачу из массива
 	saveToLocalStorage(); // Сохраняем изменения
 	parentNode.remove(); // Удаляем задачу из разметки
-	highlightEven(); // Вызываем функцию выделения четных элементов
-	highlightOdd(); // Вызываем функцию выделения нечетных элементов
 	checkEmptyList(); // Проверяем, пуст ли список задач
 }
 
@@ -127,8 +125,6 @@ function deleteLast() {
 		lastItem.remove();
 		tasks.pop(); // Удаляем последнюю задачу из массива
 		saveToLocalStorage(); // Сохраняем изменения
-		highlightEven(); // Вызываем функцию выделения четных элементов
-		highlightOdd(); // Вызываем функцию выделения нечетных элементов
 		checkEmptyList(); // Проверяем, пуст ли список
 	}
 }
@@ -141,8 +137,6 @@ function deleteFirst() {
 		firstItem.remove();
 		tasks.shift(); // Удаляем первую задачу из массива
 		saveToLocalStorage(); // Сохраняем изменения
-		highlightEven(); // Вызываем функцию выделения четных элементов
-		highlightOdd(); // Вызываем функцию выделения нечетных элементов
 		checkEmptyList(); // Проверяем, пуст ли список
 	}
 }
