@@ -76,10 +76,15 @@ function doneTask(event) {
 	// Изменяем статус задачи
 	tasks[taskIndex].done = !tasks[taskIndex].done;
 
-	// Если задача выполнена, перемещаем её в конец списка
 	if (tasks[taskIndex].done) {
+		// Если задача выполнена, перемещаем её в конец списка
 		const completedTask = tasks.splice(taskIndex, 1)[0];
 		tasks.push(completedTask);
+	} else {
+		// Если задача отмечена как невыполненная, перемещаем её в начало списка
+		const undoneTask = tasks.splice(taskIndex, 1)[0];
+		tasks.unshift(undoneTask);
+		tasksList.insertBefore(parentNode, tasksList.firstChild); // Перемещаем элемент на странице в начало списка
 	}
 
 	saveToLocalStorage(); // Сохраняем изменения
@@ -96,6 +101,7 @@ function doneTask(event) {
 		renderTask(task);
 	});
 }
+
 
 // Функция выделения четных элементов
 function highlightEven() {
