@@ -49,6 +49,7 @@ function addTask(event) {
 
 	taskInput.value = ''; // Очищаем поле ввода
 	taskInput.focus(); // Возвращаем фокус на поле ввода
+	removeEvenOddStyles() //  Удаление стилей для четных и нечетных элементов
 	checkEmptyList(); // Проверяем, пуст ли список
 }
 
@@ -61,6 +62,7 @@ function deleteTask(event) {
 	const id = Number(parentNode.id); // Получаем ID задачи
 	tasks = tasks.filter((task) => task.id !== id); // Удаляем задачу из массива
 	saveToLocalStorage(); // Сохраняем изменения
+	removeEvenOddStyles() //  Удаление стилей для четных и нечетных элементов
 	parentNode.remove(); // Удаляем задачу из разметки
 	checkEmptyList(); // Проверяем, пуст ли список задач
 }
@@ -127,6 +129,14 @@ function highlightOdd() {
 	});
 }
 
+// Функция для удаления стилей для четных и нечетных элементов
+function removeEvenOddStyles() {
+	const taskItems = document.querySelectorAll('.list-group-item');
+	taskItems.forEach((item) => {
+		item.classList.remove('even-highlighted', 'odd-highlighted');
+	});
+}
+
 
 // Функция удаления последней задачи
 function deleteLast() {
@@ -136,7 +146,9 @@ function deleteLast() {
 		lastItem.remove();
 		tasks.pop(); // Удаляем последнюю задачу из массива
 		saveToLocalStorage(); // Сохраняем изменения
+		removeEvenOddStyles() //  Удаление стилей для четных и нечетных элементов
 		checkEmptyList(); // Проверяем, пуст ли список
+		deleteTask(); // Удаляем стили
 	}
 }
 
@@ -148,9 +160,12 @@ function deleteFirst() {
 		firstItem.remove();
 		tasks.shift(); // Удаляем первую задачу из массива
 		saveToLocalStorage(); // Сохраняем изменения
+		removeEvenOddStyles() //  Удаление стилей для четных и нечетных элементов
 		checkEmptyList(); // Проверяем, пуст ли список
+		deleteTask(); // Удаляем стили
 	}
 }
+
 
 // Проверка и отображение сообщения о пустом списке
 function checkEmptyList() {
