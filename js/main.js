@@ -128,7 +128,6 @@ function highlightOdd() {
 }
 
 
-
 // Функция удаления последней задачи
 function deleteLast() {
 	const taskItems = document.querySelectorAll('.list-group-item');
@@ -156,7 +155,7 @@ function deleteFirst() {
 // Проверка и отображение сообщения о пустом списке
 function checkEmptyList() {
 	if (tasks.length === 0) {
-		const emptyListHTML = `<li id="emptyList" class="list-group-item empty-list">
+		const emptyListHTML = `<li id="emptyList" class="empty-list-item empty-list">
             <img src="./img/leaf.svg" alt="Empty" width="48" class="empty-list__img">
             <div class="empty-list__title">Список дел пуст</div>
         </li>`;
