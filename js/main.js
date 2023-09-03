@@ -29,7 +29,12 @@ deleteFirstBtn.addEventListener('click', deleteFirst); // Удалить пер�
 function addTask(event) {
 	event.preventDefault(); // Отменяем отправку формы
 
-	const taskText = taskInput.value; // Получаем текст задачи
+	const taskText = taskInput.value.trim(); // Получаем текст задачи и удаляем лишние пробелы
+
+	if (taskText === "") {
+		// Если строка пуста, ничего не делаем
+		return;
+	}
 
 	// Создаем объект задачи
 	const newTask = {
@@ -46,6 +51,7 @@ function addTask(event) {
 	taskInput.focus(); // Возвращаем фокус на поле ввода
 	checkEmptyList(); // Проверяем, пуст ли список
 }
+
 
 // Функция удаления задачи
 function deleteTask(event) {
