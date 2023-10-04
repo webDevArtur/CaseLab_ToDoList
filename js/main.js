@@ -138,7 +138,7 @@ function removeEvenOddStyles() {
 }
 
 
-// Функция удаления последней задачи
+// Функция для удаления последней задачи
 function deleteLast() {
 	const taskItems = document.querySelectorAll('.list-group-item');
 	const lastItem = taskItems[taskItems.length - 1];
@@ -148,7 +148,7 @@ function deleteLast() {
 		saveToLocalStorage(); // Сохраняем изменения
 		removeEvenOddStyles() //  Удаление стилей для четных и нечетных элементов
 		checkEmptyList(); // Проверяем, пуст ли список
-		deleteTask(); // Удаляем стили
+		deleteTask(event); // Передаем объект события event
 	}
 }
 
@@ -162,9 +162,10 @@ function deleteFirst() {
 		saveToLocalStorage(); // Сохраняем изменения
 		removeEvenOddStyles() //  Удаление стилей для четных и нечетных элементов
 		checkEmptyList(); // Проверяем, пуст ли список
-		deleteTask(); // Удаляем стили
+		deleteTask(event); // Передаем объект события event
 	}
 }
+
 
 
 // Проверка и отображение сообщения о пустом списке
