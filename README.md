@@ -11,6 +11,9 @@ https://webdevartur.github.io/CaseLab_ToDoList/
 - Выделение четных и нечетных элементов.
 - Хранение данных в локальном хранилище браузера.
 
+  ![image](https://github.com/webDevArtur/CaseLab_ToDoList/assets/141954990/425f1a06-4913-4e8f-ae45-06706420c6b9)
+
+
 ## Инструкции по Запуску
 
 1. Склонируйте репозиторий на свой компьютер.
